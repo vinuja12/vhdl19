@@ -1,0 +1,12 @@
+AREA ADDCARY,CODE,READONLY
+    ENTRY
+    MOV R5,#0X00
+    MOV R0,#0X01
+    MOV R1,#0X02
+    MVN R2,R0
+    MVN R3,R1
+    ADDS R4,R3,R2
+    BCC L
+    ADD R5,R5,#1
+L   B  L
+    END
